@@ -1,0 +1,54 @@
+|DUT
+input_vector[0] => Part1:add_instance.A[0]
+input_vector[1] => Part1:add_instance.A[1]
+input_vector[2] => Part1:add_instance.A[2]
+input_vector[3] => Part1:add_instance.A[3]
+output_vector[0] << Part1:add_instance.B[0]
+output_vector[1] << Part1:add_instance.B[1]
+output_vector[2] << Part1:add_instance.B[2]
+output_vector[3] << Part1:add_instance.B[3]
+
+
+|DUT|Part1:add_instance
+A[0] => Or_2:Add4.A
+A[1] => Or_2:Add3.A
+A[1] => Y.IN0
+A[2] => Or_2:Add2.A
+A[2] => Y.IN1
+A[3] => Or_2:Add1.A
+A[3] => M.IN1
+B[0] <= Or_2:Add4.Y
+B[1] <= Or_2:Add3.Y
+B[2] <= Or_2:Add2.Y
+B[3] <= Or_2:Add1.Y
+
+
+|DUT|Part1:add_instance|Invert_1:Inv
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Part1:add_instance|Or_2:Add1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Part1:add_instance|Or_2:Add2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Part1:add_instance|Or_2:Add3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Part1:add_instance|Or_2:Add4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

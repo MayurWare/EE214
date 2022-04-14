@@ -1,0 +1,512 @@
+Analysis & Synthesis report for song_tb
+Thu Apr 01 17:15:44 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |music|y_present
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Port Connectivity Checks: "toneGenerator:Ni1"
+ 15. Port Connectivity Checks: "toneGenerator:Dha1"
+ 16. Port Connectivity Checks: "toneGenerator:Pa1"
+ 17. Port Connectivity Checks: "toneGenerator:Ma1"
+ 18. Port Connectivity Checks: "toneGenerator:Ga1"
+ 19. Port Connectivity Checks: "toneGenerator:Re1"
+ 20. Port Connectivity Checks: "toneGenerator:Sa1"
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Apr 01 17:15:44 2021       ;
+; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name               ; song_tb                                     ;
+; Top-level Entity Name       ; music                                       ;
+; Family                      ; MAX V                                       ;
+; Total logic elements        ; 604                                         ;
+; Total pins                  ; 11                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 5M1270ZT144C5      ;                    ;
+; Top-level entity name                                            ; music              ; song_tb            ;
+; Family name                                                      ; MAX V              ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                           ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                    ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
+; music.vhd                        ; yes             ; User VHDL File  ; E:/4. SPRING 2021/EE214/EXP 6/music.vhd         ;         ;
+; toneGenerator.vhd                ; yes             ; User VHDL File  ; E:/4. SPRING 2021/EE214/EXP 6/toneGenerator.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Total logic elements                        ; 604    ;
+;     -- Combinational with no register       ; 343    ;
+;     -- Register only                        ; 143    ;
+;     -- Combinational with a register        ; 118    ;
+;                                             ;        ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 189    ;
+;     -- 3 input functions                    ; 18     ;
+;     -- 2 input functions                    ; 244    ;
+;     -- 1 input functions                    ; 9      ;
+;     -- 0 input functions                    ; 1      ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 367    ;
+;     -- arithmetic mode                      ; 237    ;
+;     -- qfbk mode                            ; 0      ;
+;     -- register cascade mode                ; 0      ;
+;     -- synchronous clear/load mode          ; 32     ;
+;     -- asynchronous clear/load mode         ; 0      ;
+;                                             ;        ;
+; Total registers                             ; 261    ;
+; Total logic cells in carry chains           ; 246    ;
+; I/O pins                                    ; 11     ;
+; Maximum fan-out node                        ; clk_50 ;
+; Maximum fan-out                             ; 221    ;
+; Total fan-out                               ; 1782   ;
+; Average fan-out                             ; 2.90   ;
++---------------------------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                        ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name       ; Entity Name   ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------+---------------+--------------+
+; |music                     ; 604 (169)   ; 261          ; 0          ; 11   ; 0            ; 343 (100)    ; 143 (16)          ; 118 (53)         ; 246 (59)        ; 0 (0)      ; |music                    ; music         ; work         ;
+;    |toneGenerator:Dha1|    ; 60 (60)     ; 26           ; 0          ; 0    ; 0            ; 34 (34)      ; 18 (18)           ; 8 (8)            ; 26 (26)         ; 0 (0)      ; |music|toneGenerator:Dha1 ; toneGenerator ; work         ;
+;    |toneGenerator:Ga1|     ; 63 (63)     ; 28           ; 0          ; 0    ; 0            ; 35 (35)      ; 19 (19)           ; 9 (9)            ; 27 (27)         ; 0 (0)      ; |music|toneGenerator:Ga1  ; toneGenerator ; work         ;
+;    |toneGenerator:Ma1|     ; 63 (63)     ; 28           ; 0          ; 0    ; 0            ; 35 (35)      ; 18 (18)           ; 10 (10)          ; 27 (27)         ; 0 (0)      ; |music|toneGenerator:Ma1  ; toneGenerator ; work         ;
+;    |toneGenerator:Ni1|     ; 63 (63)     ; 28           ; 0          ; 0    ; 0            ; 35 (35)      ; 20 (20)           ; 8 (8)            ; 27 (27)         ; 0 (0)      ; |music|toneGenerator:Ni1  ; toneGenerator ; work         ;
+;    |toneGenerator:Pa1|     ; 60 (60)     ; 26           ; 0          ; 0    ; 0            ; 34 (34)      ; 18 (18)           ; 8 (8)            ; 26 (26)         ; 0 (0)      ; |music|toneGenerator:Pa1  ; toneGenerator ; work         ;
+;    |toneGenerator:Re1|     ; 63 (63)     ; 28           ; 0          ; 0    ; 0            ; 35 (35)      ; 17 (17)           ; 11 (11)          ; 27 (27)         ; 0 (0)      ; |music|toneGenerator:Re1  ; toneGenerator ; work         ;
+;    |toneGenerator:Sa1|     ; 63 (63)     ; 28           ; 0          ; 0    ; 0            ; 35 (35)      ; 17 (17)           ; 11 (11)          ; 27 (27)         ; 0 (0)      ; |music|toneGenerator:Sa1  ; toneGenerator ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |music|y_present                                                                                                              ;
++------------------+--------------+--------------+---------------+--------------+--------------+--------------+--------------+------------------+
+; Name             ; y_present.Sa ; y_present.Ni ; y_present.Dha ; y_present.Pa ; y_present.Ma ; y_present.Ga ; y_present.Re ; y_present.Silent ;
++------------------+--------------+--------------+---------------+--------------+--------------+--------------+--------------+------------------+
+; y_present.Silent ; 0            ; 0            ; 0             ; 0            ; 0            ; 0            ; 0            ; 0                ;
+; y_present.Re     ; 0            ; 0            ; 0             ; 0            ; 0            ; 0            ; 1            ; 1                ;
+; y_present.Ga     ; 0            ; 0            ; 0             ; 0            ; 0            ; 1            ; 0            ; 1                ;
+; y_present.Ma     ; 0            ; 0            ; 0             ; 0            ; 1            ; 0            ; 0            ; 1                ;
+; y_present.Pa     ; 0            ; 0            ; 0             ; 1            ; 0            ; 0            ; 0            ; 1                ;
+; y_present.Dha    ; 0            ; 0            ; 1             ; 0            ; 0            ; 0            ; 0            ; 1                ;
+; y_present.Ni     ; 0            ; 1            ; 0             ; 0            ; 0            ; 0            ; 0            ; 1                ;
+; y_present.Sa     ; 1            ; 0            ; 0             ; 0            ; 0            ; 0            ; 0            ; 1                ;
++------------------+--------------+--------------+---------------+--------------+--------------+--------------+--------------+------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; LED[0]$latch                                       ; y_present.Silent    ; yes                    ;
+; LED[1]$latch                                       ; y_present.Silent    ; yes                    ;
+; LED[2]$latch                                       ; y_present.Silent    ; yes                    ;
+; LED[3]$latch                                       ; y_present.Silent    ; yes                    ;
+; LED[4]$latch                                       ; y_present.Silent    ; yes                    ;
+; LED[5]$latch                                       ; y_present.Silent    ; yes                    ;
+; LED[6]$latch                                       ; y_present.Silent    ; yes                    ;
+; Number of user-specified and inferred latches = 7  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++------------------------------------------+---------------------------------------------+
+; Register name                            ; Reason for Removal                          ;
++------------------------------------------+---------------------------------------------+
+; toneGenerator:Ni1|count_sa1[0]           ; Stuck at VCC due to stuck port clock_enable ;
+; toneGenerator:Ni1|count_sa1[1..26]       ; Stuck at GND due to stuck port clock_enable ;
+; toneGenerator:Dha1|count_sa1[0]          ; Stuck at VCC due to stuck port clock_enable ;
+; toneGenerator:Dha1|count_sa1[1..26]      ; Stuck at GND due to stuck port clock_enable ;
+; toneGenerator:Pa1|count_sa1[0]           ; Stuck at VCC due to stuck port clock_enable ;
+; toneGenerator:Pa1|count_sa1[1..26]       ; Stuck at GND due to stuck port clock_enable ;
+; toneGenerator:Ma1|count_sa1[0]           ; Stuck at VCC due to stuck port clock_enable ;
+; toneGenerator:Ma1|count_sa1[1..26]       ; Stuck at GND due to stuck port clock_enable ;
+; toneGenerator:Ga1|count_sa1[0]           ; Stuck at VCC due to stuck port clock_enable ;
+; toneGenerator:Ga1|count_sa1[1..26]       ; Stuck at GND due to stuck port clock_enable ;
+; toneGenerator:Re1|count_sa1[0]           ; Stuck at VCC due to stuck port clock_enable ;
+; toneGenerator:Re1|count_sa1[1..26]       ; Stuck at GND due to stuck port clock_enable ;
+; toneGenerator:Ni1|count_sa8[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Ni1|count_sa6[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Ni1|count_sa5[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Ni1|count_sa4[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Ni1|count_sa3[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Ni1|count_sa2[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Dha1|count_sa8[0..26]      ; Lost fanout                                 ;
+; toneGenerator:Dha1|count_sa7[0..26]      ; Lost fanout                                 ;
+; toneGenerator:Dha1|count_sa5[0..26]      ; Lost fanout                                 ;
+; toneGenerator:Dha1|count_sa4[0..26]      ; Lost fanout                                 ;
+; toneGenerator:Dha1|count_sa3[0..26]      ; Lost fanout                                 ;
+; toneGenerator:Dha1|count_sa2[0..26]      ; Lost fanout                                 ;
+; toneGenerator:Pa1|count_sa8[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Pa1|count_sa7[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Pa1|count_sa6[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Pa1|count_sa4[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Pa1|count_sa3[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Pa1|count_sa2[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Ma1|count_sa8[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Ma1|count_sa7[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Ma1|count_sa6[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Ma1|count_sa5[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Ma1|count_sa3[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Ma1|count_sa2[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Ga1|count_sa8[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Ga1|count_sa7[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Ga1|count_sa6[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Ga1|count_sa5[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Ga1|count_sa4[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Ga1|count_sa2[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Re1|count_sa8[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Re1|count_sa7[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Re1|count_sa6[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Re1|count_sa5[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Re1|count_sa4[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Re1|count_sa3[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Sa1|count_sa8[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Sa1|count_sa7[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Sa1|count_sa6[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Sa1|count_sa5[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Sa1|count_sa4[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Sa1|count_sa3[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Sa1|count_sa2[0..26]       ; Lost fanout                                 ;
+; toneGenerator:Ni1|LED[0..5]              ; Stuck at GND due to stuck port data_in      ;
+; toneGenerator:Ni1|LED[6]                 ; Stuck at VCC due to stuck port data_in      ;
+; toneGenerator:Ni1|LED[7]                 ; Stuck at GND due to stuck port data_in      ;
+; toneGenerator:Dha1|LED[0..4]             ; Stuck at GND due to stuck port data_in      ;
+; toneGenerator:Dha1|LED[5]                ; Stuck at VCC due to stuck port data_in      ;
+; toneGenerator:Dha1|LED[6,7]              ; Stuck at GND due to stuck port data_in      ;
+; toneGenerator:Pa1|LED[4]                 ; Stuck at VCC due to stuck port data_in      ;
+; toneGenerator:Pa1|LED[0..3,5..7]         ; Stuck at GND due to stuck port data_in      ;
+; toneGenerator:Ma1|LED[4]                 ; Stuck at GND due to stuck port data_in      ;
+; toneGenerator:Ma1|LED[3]                 ; Stuck at VCC due to stuck port data_in      ;
+; toneGenerator:Ma1|LED[0..2,5..7]         ; Stuck at GND due to stuck port data_in      ;
+; toneGenerator:Ga1|LED[3,4]               ; Stuck at GND due to stuck port data_in      ;
+; toneGenerator:Ga1|LED[2]                 ; Stuck at VCC due to stuck port data_in      ;
+; toneGenerator:Ga1|LED[0,1,5..7]          ; Stuck at GND due to stuck port data_in      ;
+; toneGenerator:Re1|LED[2..4]              ; Stuck at GND due to stuck port data_in      ;
+; toneGenerator:Re1|LED[1]                 ; Stuck at VCC due to stuck port data_in      ;
+; toneGenerator:Re1|LED[0,5..7]            ; Stuck at GND due to stuck port data_in      ;
+; toneGenerator:Sa1|LED[1..4]              ; Stuck at GND due to stuck port data_in      ;
+; toneGenerator:Sa1|LED[0]                 ; Stuck at VCC due to stuck port data_in      ;
+; toneGenerator:Sa1|LED[5..7]              ; Stuck at GND due to stuck port data_in      ;
+; toneGenerator:Ni1|sa1                    ; Merged with toneGenerator:Ni1|toneOut       ;
+; toneGenerator:Dha1|sa1                   ; Merged with toneGenerator:Dha1|toneOut      ;
+; toneGenerator:Pa1|sa1                    ; Merged with toneGenerator:Pa1|toneOut       ;
+; toneGenerator:Ma1|sa1                    ; Merged with toneGenerator:Ma1|toneOut       ;
+; toneGenerator:Ga1|sa1                    ; Merged with toneGenerator:Ga1|toneOut       ;
+; toneGenerator:Re1|sa1                    ; Merged with toneGenerator:Re1|toneOut       ;
+; toneGenerator:Sa1|sa1                    ; Merged with toneGenerator:Sa1|toneOut       ;
+; toneGenerator:Dha1|count_sa6[0]          ; Merged with toneGenerator:Sa1|count_sa1[0]  ;
+; toneGenerator:Pa1|count_sa5[0]           ; Merged with toneGenerator:Sa1|count_sa1[0]  ;
+; toneGenerator:Pa1|count_sa5[1]           ; Merged with toneGenerator:Sa1|count_sa1[1]  ;
+; toneGenerator:Dha1|count_sa6[1]          ; Merged with toneGenerator:Sa1|count_sa1[1]  ;
+; Total Number of Removed Registers = 1390 ;                                             ;
++------------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 261   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 32    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; toneGenerator:Ni1|toneOut               ; 2       ;
+; toneGenerator:Dha1|toneOut              ; 2       ;
+; toneGenerator:Pa1|toneOut               ; 2       ;
+; toneGenerator:Ma1|toneOut               ; 2       ;
+; toneGenerator:Sa1|toneOut               ; 2       ;
+; toneGenerator:Ga1|toneOut               ; 2       ;
+; toneGenerator:Re1|toneOut               ; 2       ;
+; toneGenerator:Ni1|count_sa7[0]          ; 3       ;
+; toneGenerator:Sa1|count_sa1[0]          ; 7       ;
+; toneGenerator:Ma1|count_sa4[0]          ; 3       ;
+; toneGenerator:Ga1|count_sa3[0]          ; 3       ;
+; toneGenerator:Re1|count_sa2[0]          ; 3       ;
+; clk_c                                   ; 1       ;
+; Total number of inverted registers = 13 ;         ;
++-----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |music|n_count[9]          ;
+; 23:1               ; 8 bits    ; 120 LEs       ; 80 LEs               ; 40 LEs                 ; No         ; |music|y_present           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "toneGenerator:Ni1"  ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; switch[5..0] ; Input ; Info     ; Stuck at GND ;
+; switch[7]    ; Input ; Info     ; Stuck at GND ;
+; switch[6]    ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "toneGenerator:Dha1" ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; switch[7..6] ; Input ; Info     ; Stuck at GND ;
+; switch[4..0] ; Input ; Info     ; Stuck at GND ;
+; switch[5]    ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "toneGenerator:Pa1"  ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; switch[7..5] ; Input ; Info     ; Stuck at GND ;
+; switch[3..0] ; Input ; Info     ; Stuck at GND ;
+; switch[4]    ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "toneGenerator:Ma1"  ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; switch[7..4] ; Input ; Info     ; Stuck at GND ;
+; switch[2..0] ; Input ; Info     ; Stuck at GND ;
+; switch[3]    ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "toneGenerator:Ga1"  ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; switch[7..3] ; Input ; Info     ; Stuck at GND ;
+; switch[1..0] ; Input ; Info     ; Stuck at GND ;
+; switch[2]    ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "toneGenerator:Re1"  ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; switch[7..2] ; Input ; Info     ; Stuck at GND ;
+; switch[1]    ; Input ; Info     ; Stuck at VCC ;
+; switch[0]    ; Input ; Info     ; Stuck at GND ;
++--------------+-------+----------+--------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "toneGenerator:Sa1"  ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; switch[7..1] ; Input ; Info     ; Stuck at GND ;
+; switch[0]    ; Input ; Info     ; Stuck at VCC ;
++--------------+-------+----------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Thu Apr 01 17:15:33 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Exp6 -c song_tb
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file song_tb.vhd
+    Info (12022): Found design unit 1: song_tb-testbench File: E:/4. SPRING 2021/EE214/EXP 6/song_tb.vhd Line: 9
+    Info (12023): Found entity 1: song_tb File: E:/4. SPRING 2021/EE214/EXP 6/song_tb.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file music.vhd
+    Info (12022): Found design unit 1: music-fsm File: E:/4. SPRING 2021/EE214/EXP 6/music.vhd Line: 10
+    Info (12023): Found entity 1: music File: E:/4. SPRING 2021/EE214/EXP 6/music.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file tonegenerator.vhd
+    Info (12022): Found design unit 1: toneGenerator-arch1 File: E:/4. SPRING 2021/EE214/EXP 6/toneGenerator.vhd Line: 9
+    Info (12023): Found entity 1: toneGenerator File: E:/4. SPRING 2021/EE214/EXP 6/toneGenerator.vhd Line: 3
+Info (12127): Elaborating entity "music" for the top level hierarchy
+Warning (10631): VHDL Process Statement warning at music.vhd(29): inferring latch(es) for signal or variable "LED", which holds its previous value in one or more paths through the process File: E:/4. SPRING 2021/EE214/EXP 6/music.vhd Line: 29
+Info (10041): Inferred latch for "LED[0]" at music.vhd(29) File: E:/4. SPRING 2021/EE214/EXP 6/music.vhd Line: 29
+Info (10041): Inferred latch for "LED[1]" at music.vhd(29) File: E:/4. SPRING 2021/EE214/EXP 6/music.vhd Line: 29
+Info (10041): Inferred latch for "LED[2]" at music.vhd(29) File: E:/4. SPRING 2021/EE214/EXP 6/music.vhd Line: 29
+Info (10041): Inferred latch for "LED[3]" at music.vhd(29) File: E:/4. SPRING 2021/EE214/EXP 6/music.vhd Line: 29
+Info (10041): Inferred latch for "LED[4]" at music.vhd(29) File: E:/4. SPRING 2021/EE214/EXP 6/music.vhd Line: 29
+Info (10041): Inferred latch for "LED[5]" at music.vhd(29) File: E:/4. SPRING 2021/EE214/EXP 6/music.vhd Line: 29
+Info (10041): Inferred latch for "LED[6]" at music.vhd(29) File: E:/4. SPRING 2021/EE214/EXP 6/music.vhd Line: 29
+Info (10041): Inferred latch for "LED[7]" at music.vhd(29) File: E:/4. SPRING 2021/EE214/EXP 6/music.vhd Line: 29
+Info (12128): Elaborating entity "toneGenerator" for hierarchy "toneGenerator:Sa1" File: E:/4. SPRING 2021/EE214/EXP 6/music.vhd Line: 141
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LED[7]" is stuck at GND File: E:/4. SPRING 2021/EE214/EXP 6/music.vhd Line: 29
+Info (17049): 1161 registers lost all their fanouts during netlist optimizations.
+Info (21057): Implemented 615 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 9 output pins
+    Info (21061): Implemented 604 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4775 megabytes
+    Info: Processing ended: Thu Apr 01 17:15:44 2021
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:28
+
+

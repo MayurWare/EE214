@@ -1,0 +1,69 @@
+|DUT
+input_vector[0] => Div_4Bit:add_instance.D[0]
+input_vector[1] => Div_4Bit:add_instance.D[1]
+input_vector[2] => Div_4Bit:add_instance.D[2]
+input_vector[3] => Div_4Bit:add_instance.D[3]
+input_vector[4] => Div_4Bit:add_instance.Nu[0]
+input_vector[5] => Div_4Bit:add_instance.Nu[1]
+input_vector[6] => Div_4Bit:add_instance.Nu[2]
+input_vector[7] => Div_4Bit:add_instance.Nu[3]
+output_vector[0] << Div_4Bit:add_instance.RQ[0]
+output_vector[1] << Div_4Bit:add_instance.RQ[1]
+output_vector[2] << Div_4Bit:add_instance.RQ[2]
+output_vector[3] << Div_4Bit:add_instance.RQ[3]
+output_vector[4] << Div_4Bit:add_instance.RQ[4]
+output_vector[5] << Div_4Bit:add_instance.RQ[5]
+output_vector[6] << Div_4Bit:add_instance.RQ[6]
+output_vector[7] << Div_4Bit:add_instance.RQ[7]
+
+
+|DUT|Div_4Bit:add_instance
+Nu[0] => ~NO_FANOUT~
+Nu[1] => ~NO_FANOUT~
+Nu[2] => ~NO_FANOUT~
+Nu[3] => diff.IN0
+Nu[3] => borrow.IN0
+D[0] => \division:s[3][1].IN1
+D[0] => borrow.IN1
+D[0] => \division:s[1][1].IN1
+D[0] => borrow.IN1
+D[0] => \division:s[2][1].IN1
+D[0] => borrow.IN1
+D[0] => diff.IN1
+D[0] => borrow.IN1
+D[0] => \division:pr[2][4].DATAIN
+D[0] => \division:pr[3][4].DATAIN
+D[0] => \division:pr[4][4].DATAIN
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => diff.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => borrow.IN1
+D[1] => \division:s[0][1].IN1
+D[1] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => borrow.IN1
+D[2] => diff.IN1
+D[2] => borrow.IN1
+D[2] => \division:s[0][2].IN1
+D[2] => borrow.IN1
+D[3] => diff.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => borrow.IN1
+D[3] => \division:pr[1][0].IN1
+RQ[0] <= borrow.DB_MAX_OUTPUT_PORT_TYPE
+RQ[1] <= <GND>
+RQ[2] <= <GND>
+RQ[3] <= <GND>
+RQ[4] <= \division:pr[4][4].DB_MAX_OUTPUT_PORT_TYPE
+RQ[5] <= \division:pr[4][5].DB_MAX_OUTPUT_PORT_TYPE
+RQ[6] <= \division:pr[4][6].DB_MAX_OUTPUT_PORT_TYPE
+RQ[7] <= \division:pr[4][7].DB_MAX_OUTPUT_PORT_TYPE
+
+

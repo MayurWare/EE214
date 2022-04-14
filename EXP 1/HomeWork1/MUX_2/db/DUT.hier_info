@@ -1,0 +1,15 @@
+|DUT
+input_vector[0] => MUX_2:add_instance.I2
+input_vector[1] => MUX_2:add_instance.I1
+input_vector[2] => MUX_2:add_instance.S
+output_vector[0] << MUX_2:add_instance.Y
+
+
+|DUT|MUX_2:add_instance
+S => Y.IN0
+S => Y.IN0
+I1 => Y.IN1
+I2 => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,785 @@
+Timing Analyzer report for song_tb
+Thu Apr 01 17:15:53 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'clock_music'
+ 12. Setup: 'clk_50'
+ 13. Setup: 'y_present.Silent'
+ 14. Hold: 'clock_music'
+ 15. Hold: 'y_present.Silent'
+ 16. Hold: 'clk_50'
+ 17. Setup Transfers
+ 18. Hold Transfers
+ 19. Report TCCS
+ 20. Report RSKM
+ 21. Unconstrained Paths Summary
+ 22. Clock Status Summary
+ 23. Unconstrained Input Ports
+ 24. Unconstrained Output Ports
+ 25. Unconstrained Input Ports
+ 26. Unconstrained Output Ports
+ 27. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; song_tb                                             ;
+; Device Family         ; MAX V                                               ;
+; Device Name           ; 5M1270ZT144C5                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                             ;
++------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------+
+; Clock Name       ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets              ;
++------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------+
+; clk_50           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_50 }           ;
+; clock_music      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock_music }      ;
+; y_present.Silent ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { y_present.Silent } ;
++------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------+
+
+
++---------------------------------------------------+
+; Fmax Summary                                      ;
++------------+-----------------+-------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name  ; Note ;
++------------+-----------------+-------------+------+
+; 66.57 MHz  ; 66.57 MHz       ; clock_music ;      ;
+; 106.52 MHz ; 106.52 MHz      ; clk_50      ;      ;
++------------+-----------------+-------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------------+
+; Setup Summary                              ;
++------------------+---------+---------------+
+; Clock            ; Slack   ; End Point TNS ;
++------------------+---------+---------------+
+; clock_music      ; -14.021 ; -488.804      ;
+; clk_50           ; -8.388  ; -1429.533     ;
+; y_present.Silent ; -0.995  ; -5.417        ;
++------------------+---------+---------------+
+
+
++-------------------------------------------+
+; Hold Summary                              ;
++------------------+--------+---------------+
+; Clock            ; Slack  ; End Point TNS ;
++------------------+--------+---------------+
+; clock_music      ; -2.706 ; -2.971        ;
+; y_present.Silent ; -0.069 ; -0.212        ;
+; clk_50           ; 1.650  ; 0.000         ;
++------------------+--------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++-------------------------------------------+
+; Minimum Pulse Width Summary               ;
++------------------+--------+---------------+
+; Clock            ; Slack  ; End Point TNS ;
++------------------+--------+---------------+
+; clk_50           ; -2.289 ; -2.289        ;
+; clock_music      ; 0.234  ; 0.000         ;
+; y_present.Silent ; 0.500  ; 0.000         ;
++------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Setup: 'clock_music'                                                                                           ;
++---------+-------------+------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node   ; To Node          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-------------+------------------+--------------+-------------+--------------+------------+------------+
+; -14.021 ; n_count[24] ; y_present.Re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.688     ;
+; -14.009 ; n_count[24] ; y_present.Pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.676     ;
+; -13.845 ; n_count[29] ; y_present.Re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.512     ;
+; -13.834 ; n_count[24] ; y_present.Ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.501     ;
+; -13.833 ; n_count[24] ; y_present.Sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.500     ;
+; -13.833 ; n_count[29] ; y_present.Pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.500     ;
+; -13.829 ; n_count[25] ; y_present.Re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.496     ;
+; -13.824 ; n_count[24] ; y_present.Ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.491     ;
+; -13.819 ; n_count[24] ; y_present.Ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.486     ;
+; -13.817 ; n_count[25] ; y_present.Pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.484     ;
+; -13.739 ; n_count[22] ; y_present.Re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.406     ;
+; -13.727 ; n_count[22] ; y_present.Pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.394     ;
+; -13.679 ; n_count[27] ; y_present.Re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.346     ;
+; -13.667 ; n_count[27] ; y_present.Pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.334     ;
+; -13.658 ; n_count[29] ; y_present.Ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.325     ;
+; -13.657 ; n_count[29] ; y_present.Sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.324     ;
+; -13.648 ; n_count[29] ; y_present.Ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.315     ;
+; -13.643 ; n_count[29] ; y_present.Ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.310     ;
+; -13.642 ; n_count[25] ; y_present.Ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.309     ;
+; -13.641 ; n_count[25] ; y_present.Sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.308     ;
+; -13.632 ; n_count[25] ; y_present.Ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.299     ;
+; -13.627 ; n_count[25] ; y_present.Ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.294     ;
+; -13.552 ; n_count[22] ; y_present.Ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.219     ;
+; -13.551 ; n_count[22] ; y_present.Sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.218     ;
+; -13.542 ; n_count[22] ; y_present.Ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.209     ;
+; -13.537 ; n_count[22] ; y_present.Ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.204     ;
+; -13.520 ; n_count[26] ; y_present.Re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.187     ;
+; -13.508 ; n_count[26] ; y_present.Pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.175     ;
+; -13.494 ; n_count[14] ; y_present.Re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.161     ;
+; -13.492 ; n_count[27] ; y_present.Ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.159     ;
+; -13.491 ; n_count[27] ; y_present.Sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.158     ;
+; -13.482 ; n_count[14] ; y_present.Pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.149     ;
+; -13.482 ; n_count[27] ; y_present.Ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.149     ;
+; -13.477 ; n_count[27] ; y_present.Ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.144     ;
+; -13.467 ; n_count[9]  ; y_present.Re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.134     ;
+; -13.455 ; n_count[9]  ; y_present.Pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.122     ;
+; -13.333 ; n_count[26] ; y_present.Ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 14.000     ;
+; -13.332 ; n_count[26] ; y_present.Sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.999     ;
+; -13.324 ; n_count[24] ; y_present.Dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.991     ;
+; -13.323 ; n_count[26] ; y_present.Ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.990     ;
+; -13.318 ; n_count[26] ; y_present.Ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.985     ;
+; -13.307 ; n_count[14] ; y_present.Ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.974     ;
+; -13.306 ; n_count[14] ; y_present.Sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.973     ;
+; -13.297 ; n_count[14] ; y_present.Ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.964     ;
+; -13.292 ; n_count[14] ; y_present.Ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.959     ;
+; -13.280 ; n_count[9]  ; y_present.Ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.947     ;
+; -13.279 ; n_count[9]  ; y_present.Sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.946     ;
+; -13.270 ; n_count[9]  ; y_present.Ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.937     ;
+; -13.265 ; n_count[9]  ; y_present.Ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.932     ;
+; -13.235 ; n_count[6]  ; y_present.Re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.902     ;
+; -13.223 ; n_count[6]  ; y_present.Pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.890     ;
+; -13.159 ; n_count[23] ; y_present.Re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.826     ;
+; -13.150 ; n_count[28] ; y_present.Re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.817     ;
+; -13.149 ; n_count[10] ; y_present.Re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.816     ;
+; -13.148 ; n_count[8]  ; y_present.Re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.815     ;
+; -13.148 ; n_count[29] ; y_present.Dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.815     ;
+; -13.147 ; n_count[23] ; y_present.Pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.814     ;
+; -13.138 ; n_count[28] ; y_present.Pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.805     ;
+; -13.137 ; n_count[10] ; y_present.Pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.804     ;
+; -13.136 ; n_count[8]  ; y_present.Pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.803     ;
+; -13.132 ; n_count[25] ; y_present.Dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.799     ;
+; -13.048 ; n_count[6]  ; y_present.Ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.715     ;
+; -13.047 ; n_count[6]  ; y_present.Sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.714     ;
+; -13.042 ; n_count[22] ; y_present.Dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.709     ;
+; -13.038 ; n_count[6]  ; y_present.Ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.705     ;
+; -13.033 ; n_count[6]  ; y_present.Ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.700     ;
+; -13.000 ; n_count[15] ; y_present.Re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.667     ;
+; -12.996 ; n_count[16] ; y_present.Re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.663     ;
+; -12.988 ; n_count[15] ; y_present.Pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.655     ;
+; -12.984 ; n_count[16] ; y_present.Pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.651     ;
+; -12.982 ; n_count[27] ; y_present.Dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.649     ;
+; -12.978 ; n_count[7]  ; y_present.Re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.645     ;
+; -12.972 ; n_count[23] ; y_present.Ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.639     ;
+; -12.971 ; n_count[23] ; y_present.Sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.638     ;
+; -12.966 ; n_count[7]  ; y_present.Pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.633     ;
+; -12.963 ; n_count[28] ; y_present.Ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.630     ;
+; -12.962 ; n_count[23] ; y_present.Ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.629     ;
+; -12.962 ; n_count[28] ; y_present.Sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.629     ;
+; -12.962 ; n_count[10] ; y_present.Ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.629     ;
+; -12.961 ; n_count[10] ; y_present.Sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.628     ;
+; -12.961 ; n_count[8]  ; y_present.Ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.628     ;
+; -12.960 ; n_count[8]  ; y_present.Sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.627     ;
+; -12.957 ; n_count[23] ; y_present.Ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.624     ;
+; -12.953 ; n_count[28] ; y_present.Ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.620     ;
+; -12.952 ; n_count[10] ; y_present.Ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.619     ;
+; -12.951 ; n_count[8]  ; y_present.Ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.618     ;
+; -12.948 ; n_count[28] ; y_present.Ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.615     ;
+; -12.947 ; n_count[10] ; y_present.Ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.614     ;
+; -12.946 ; n_count[8]  ; y_present.Ga     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.613     ;
+; -12.874 ; n_count[24] ; y_present.Silent ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.541     ;
+; -12.866 ; n_count[12] ; y_present.Re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.533     ;
+; -12.854 ; n_count[12] ; y_present.Pa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.521     ;
+; -12.823 ; n_count[26] ; y_present.Dha    ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.490     ;
+; -12.813 ; n_count[15] ; y_present.Ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.480     ;
+; -12.812 ; n_count[15] ; y_present.Sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.479     ;
+; -12.809 ; n_count[16] ; y_present.Ma     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.476     ;
+; -12.808 ; n_count[17] ; y_present.Re     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.475     ;
+; -12.808 ; n_count[16] ; y_present.Sa     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.475     ;
+; -12.803 ; n_count[15] ; y_present.Ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.470     ;
+; -12.799 ; n_count[16] ; y_present.Ni     ; clock_music  ; clock_music ; 1.000        ; 0.000      ; 13.466     ;
++---------+-------------+------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk_50'                                                                                                                                   ;
++--------+---------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; -8.388 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Sa1|count_sa1[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 9.055      ;
+; -7.985 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Sa1|count_sa1[23]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.652      ;
+; -7.904 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Pa1|count_sa5[18]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.571      ;
+; -7.837 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Pa1|count_sa5[18]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.504      ;
+; -7.826 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Sa1|count_sa1[24]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.493      ;
+; -7.824 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Sa1|count_sa1[21]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.491      ;
+; -7.823 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Pa1|count_sa5[17]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.490      ;
+; -7.775 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Sa1|count_sa1[18]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.442      ;
+; -7.756 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Pa1|count_sa5[17]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.423      ;
+; -7.710 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Sa1|count_sa1[20]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.377      ;
+; -7.675 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Pa1|count_sa5[11]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.342      ;
+; -7.672 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Sa1|count_sa1[26]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.339      ;
+; -7.670 ; toneGenerator:Pa1|count_sa5[11] ; toneGenerator:Pa1|count_sa5[11]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.337      ;
+; -7.653 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Sa1|count_sa1[19]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.320      ;
+; -7.633 ; timecounter[0]                  ; timecounter[11]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.300      ;
+; -7.621 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Pa1|count_sa5[10]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.288      ;
+; -7.608 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Pa1|count_sa5[11]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.275      ;
+; -7.568 ; timecounter[0]                  ; timecounter[18]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.235      ;
+; -7.554 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Pa1|count_sa5[10]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.221      ;
+; -7.549 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Dha1|count_sa6[15] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.216      ;
+; -7.548 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Dha1|count_sa6[14] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.215      ;
+; -7.547 ; timecounter[4]                  ; timecounter[11]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.214      ;
+; -7.545 ; timecounter[0]                  ; timecounter[19]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.212      ;
+; -7.517 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Sa1|count_sa1[9]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.184      ;
+; -7.482 ; timecounter[4]                  ; timecounter[18]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.149      ;
+; -7.481 ; timecounter[0]                  ; timecounter[26]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.148      ;
+; -7.462 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Pa1|count_sa5[19]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.129      ;
+; -7.459 ; timecounter[4]                  ; timecounter[19]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.126      ;
+; -7.453 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Pa1|count_sa5[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.120      ;
+; -7.451 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Pa1|count_sa5[21]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.118      ;
+; -7.445 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Pa1|count_sa5[16]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.112      ;
+; -7.441 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Pa1|count_sa5[26]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.108      ;
+; -7.420 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Dha1|count_sa6[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.087      ;
+; -7.418 ; timecounter[5]                  ; timecounter[11]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.085      ;
+; -7.397 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Sa1|count_sa1[15]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.064      ;
+; -7.395 ; timecounter[4]                  ; timecounter[26]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.062      ;
+; -7.395 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Pa1|count_sa5[19]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.062      ;
+; -7.389 ; toneGenerator:Pa1|count_sa5[23] ; toneGenerator:Pa1|count_sa5[11]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.056      ;
+; -7.386 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Pa1|count_sa5[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.053      ;
+; -7.384 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Pa1|count_sa5[21]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.051      ;
+; -7.382 ; timecounter[0]                  ; timecounter[16]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.049      ;
+; -7.378 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Pa1|count_sa5[16]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.045      ;
+; -7.374 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Pa1|count_sa5[26]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.041      ;
+; -7.368 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Dha1|count_sa6[12] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.035      ;
+; -7.357 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Sa1|count_sa1[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.024      ;
+; -7.353 ; timecounter[5]                  ; timecounter[18]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.020      ;
+; -7.349 ; toneGenerator:Sa1|count_sa1[3]  ; toneGenerator:Sa1|count_sa1[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.016      ;
+; -7.337 ; toneGenerator:Pa1|count_sa5[5]  ; toneGenerator:Pa1|count_sa5[18]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.004      ;
+; -7.335 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Pa1|count_sa5[13]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 8.002      ;
+; -7.331 ; toneGenerator:Sa1|count_sa1[8]  ; toneGenerator:Sa1|count_sa1[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.998      ;
+; -7.330 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Pa1|count_sa5[12]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.997      ;
+; -7.330 ; timecounter[5]                  ; timecounter[19]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.997      ;
+; -7.317 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Sa1|count_sa1[10]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.984      ;
+; -7.316 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Sa1|count_sa1[12]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.983      ;
+; -7.297 ; timecounter[8]                  ; timecounter[18]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.964      ;
+; -7.296 ; timecounter[4]                  ; timecounter[16]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.963      ;
+; -7.292 ; timecounter[0]                  ; timecounter[17]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.959      ;
+; -7.290 ; toneGenerator:Re1|count_sa2[9]  ; toneGenerator:Re1|count_sa2[20]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.957      ;
+; -7.279 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Sa1|count_sa1[8]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.946      ;
+; -7.274 ; timecounter[8]                  ; timecounter[19]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.941      ;
+; -7.268 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Pa1|count_sa5[13]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.935      ;
+; -7.266 ; timecounter[5]                  ; timecounter[26]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.933      ;
+; -7.263 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Pa1|count_sa5[12]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.930      ;
+; -7.263 ; toneGenerator:Re1|count_sa2[3]  ; toneGenerator:Re1|count_sa2[20]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.930      ;
+; -7.256 ; toneGenerator:Pa1|count_sa5[5]  ; toneGenerator:Pa1|count_sa5[17]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.923      ;
+; -7.244 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Pa1|count_sa5[14]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.911      ;
+; -7.226 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Dha1|count_sa6[22] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.893      ;
+; -7.210 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Pa1|count_sa5[20]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.877      ;
+; -7.210 ; timecounter[8]                  ; timecounter[26]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.877      ;
+; -7.210 ; toneGenerator:Re1|count_sa2[8]  ; toneGenerator:Re1|count_sa2[20]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.877      ;
+; -7.209 ; timecounter[7]                  ; timecounter[11]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.876      ;
+; -7.206 ; timecounter[4]                  ; timecounter[17]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.873      ;
+; -7.200 ; timecounter[0]                  ; timecounter[24]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.867      ;
+; -7.199 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Sa1|count_sa1[13]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.866      ;
+; -7.193 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Pa1|count_sa5[25]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.860      ;
+; -7.177 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Pa1|count_sa5[14]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.844      ;
+; -7.176 ; timecounter[24]                 ; timecounter[26]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.843      ;
+; -7.174 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Dha1|count_sa6[22] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.841      ;
+; -7.170 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Dha1|count_sa6[18] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.837      ;
+; -7.169 ; toneGenerator:Sa1|count_sa1[9]  ; toneGenerator:Sa1|count_sa1[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.836      ;
+; -7.167 ; timecounter[5]                  ; timecounter[16]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.834      ;
+; -7.165 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Pa1|count_sa5[9]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.832      ;
+; -7.152 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Pa1|count_sa5[15]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.819      ;
+; -7.151 ; toneGenerator:Sa1|count_sa1[13] ; toneGenerator:Sa1|count_sa1[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.818      ;
+; -7.144 ; timecounter[7]                  ; timecounter[18]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.811      ;
+; -7.143 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Pa1|count_sa5[20]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.810      ;
+; -7.142 ; timecounter[3]                  ; clk_c                            ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.809      ;
+; -7.133 ; toneGenerator:Ga1|count_sa3[9]  ; toneGenerator:Ga1|count_sa3[20]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.800      ;
+; -7.131 ; toneGenerator:Pa1|count_sa5[23] ; toneGenerator:Pa1|count_sa5[2]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.798      ;
+; -7.131 ; timecounter[0]                  ; timecounter[22]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.798      ;
+; -7.128 ; toneGenerator:Ga1|count_sa3[8]  ; toneGenerator:Ga1|count_sa3[20]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.795      ;
+; -7.127 ; timecounter[0]                  ; timecounter[20]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.794      ;
+; -7.126 ; toneGenerator:Pa1|count_sa5[23] ; toneGenerator:Pa1|count_sa5[8]   ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.793      ;
+; -7.126 ; toneGenerator:Sa1|count_sa1[1]  ; toneGenerator:Pa1|count_sa5[25]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.793      ;
+; -7.122 ; toneGenerator:Sa1|count_sa1[10] ; toneGenerator:Sa1|count_sa1[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.789      ;
+; -7.121 ; timecounter[7]                  ; timecounter[19]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.788      ;
+; -7.118 ; toneGenerator:Sa1|count_sa1[0]  ; toneGenerator:Dha1|count_sa6[18] ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.785      ;
+; -7.117 ; toneGenerator:Sa1|count_sa1[5]  ; toneGenerator:Sa1|count_sa1[22]  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.784      ;
+; -7.114 ; timecounter[4]                  ; timecounter[24]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.781      ;
+; -7.111 ; timecounter[8]                  ; timecounter[16]                  ; clk_50       ; clk_50      ; 1.000        ; 0.000      ; 7.778      ;
++--------+---------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Setup: 'y_present.Silent'                                                                                        ;
++--------+---------------+--------------+--------------+------------------+--------------+------------+------------+
+; Slack  ; From Node     ; To Node      ; Launch Clock ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------+--------------+--------------+------------------+--------------+------------+------------+
+; -0.995 ; y_present.Ga  ; LED[2]$latch ; clock_music  ; y_present.Silent ; 0.500        ; 2.412      ; 2.017      ;
+; -0.857 ; y_present.Dha ; LED[5]$latch ; clock_music  ; y_present.Silent ; 0.500        ; 2.318      ; 1.853      ;
+; -0.802 ; y_present.Pa  ; LED[4]$latch ; clock_music  ; y_present.Silent ; 0.500        ; 2.340      ; 1.830      ;
+; -0.763 ; y_present.Ma  ; LED[3]$latch ; clock_music  ; y_present.Silent ; 0.500        ; 2.411      ; 1.853      ;
+; -0.753 ; y_present.Sa  ; LED[0]$latch ; clock_music  ; y_present.Silent ; 0.500        ; 2.417      ; 1.848      ;
+; -0.658 ; y_present.Re  ; LED[1]$latch ; clock_music  ; y_present.Silent ; 0.500        ; 2.341      ; 1.833      ;
+; -0.589 ; y_present.Ni  ; LED[6]$latch ; clock_music  ; y_present.Silent ; 0.500        ; 2.416      ; 1.849      ;
++--------+---------------+--------------+--------------+------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clock_music'                                                                                                    ;
++--------+------------------+------------------+------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node        ; To Node          ; Launch Clock     ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------+------------------+------------------+-------------+--------------+------------+------------+
+; -2.706 ; y_present.Silent ; y_present.Silent ; y_present.Silent ; clock_music ; 0.000        ; 4.482      ; 2.373      ;
+; -2.206 ; y_present.Silent ; y_present.Silent ; y_present.Silent ; clock_music ; -0.500       ; 4.482      ; 2.373      ;
+; -0.265 ; y_present.Silent ; y_present.Pa     ; y_present.Silent ; clock_music ; 0.000        ; 4.482      ; 4.814      ;
+; 0.235  ; y_present.Silent ; y_present.Pa     ; y_present.Silent ; clock_music ; -0.500       ; 4.482      ; 4.814      ;
+; 0.330  ; y_present.Silent ; y_present.Dha    ; y_present.Silent ; clock_music ; 0.000        ; 4.482      ; 5.409      ;
+; 0.535  ; y_present.Silent ; y_present.Re     ; y_present.Silent ; clock_music ; 0.000        ; 4.482      ; 5.614      ;
+; 0.825  ; y_present.Silent ; y_present.Ga     ; y_present.Silent ; clock_music ; 0.000        ; 4.482      ; 5.904      ;
+; 0.830  ; y_present.Silent ; y_present.Ni     ; y_present.Silent ; clock_music ; 0.000        ; 4.482      ; 5.909      ;
+; 0.830  ; y_present.Silent ; y_present.Dha    ; y_present.Silent ; clock_music ; -0.500       ; 4.482      ; 5.409      ;
+; 0.839  ; y_present.Silent ; y_present.Sa     ; y_present.Silent ; clock_music ; 0.000        ; 4.482      ; 5.918      ;
+; 0.840  ; y_present.Silent ; y_present.Ma     ; y_present.Silent ; clock_music ; 0.000        ; 4.482      ; 5.919      ;
+; 1.035  ; y_present.Silent ; y_present.Re     ; y_present.Silent ; clock_music ; -0.500       ; 4.482      ; 5.614      ;
+; 1.325  ; y_present.Silent ; y_present.Ga     ; y_present.Silent ; clock_music ; -0.500       ; 4.482      ; 5.904      ;
+; 1.330  ; y_present.Silent ; y_present.Ni     ; y_present.Silent ; clock_music ; -0.500       ; 4.482      ; 5.909      ;
+; 1.339  ; y_present.Silent ; y_present.Sa     ; y_present.Silent ; clock_music ; -0.500       ; 4.482      ; 5.918      ;
+; 1.340  ; y_present.Silent ; y_present.Ma     ; y_present.Silent ; clock_music ; -0.500       ; 4.482      ; 5.919      ;
+; 2.107  ; n_count[5]       ; n_count[5]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.328      ;
+; 2.116  ; n_count[16]      ; n_count[16]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.337      ;
+; 2.116  ; n_count[6]       ; n_count[6]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.337      ;
+; 2.117  ; n_count[23]      ; n_count[23]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117  ; n_count[13]      ; n_count[13]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.338      ;
+; 2.126  ; n_count[25]      ; n_count[25]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126  ; n_count[18]      ; n_count[18]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126  ; n_count[17]      ; n_count[17]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126  ; n_count[15]      ; n_count[15]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126  ; n_count[8]       ; n_count[8]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126  ; n_count[7]       ; n_count[7]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.347      ;
+; 2.136  ; n_count[28]      ; n_count[28]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.357      ;
+; 2.141  ; n_count[26]      ; n_count[26]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.362      ;
+; 2.143  ; n_count[3]       ; n_count[3]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.364      ;
+; 2.221  ; n_count[24]      ; n_count[24]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221  ; n_count[19]      ; n_count[19]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221  ; n_count[14]      ; n_count[14]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221  ; n_count[9]       ; n_count[9]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.442      ;
+; 2.230  ; n_count[21]      ; n_count[21]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.451      ;
+; 2.230  ; n_count[11]      ; n_count[11]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.451      ;
+; 2.231  ; n_count[22]      ; n_count[22]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231  ; n_count[20]      ; n_count[20]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231  ; n_count[12]      ; n_count[12]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231  ; n_count[10]      ; n_count[10]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.452      ;
+; 2.233  ; n_count[31]      ; n_count[31]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.454      ;
+; 2.241  ; n_count[29]      ; n_count[29]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.462      ;
+; 2.250  ; n_count[4]       ; n_count[4]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.471      ;
+; 2.279  ; n_count[2]       ; n_count[2]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.500      ;
+; 2.313  ; n_count[1]       ; n_count[1]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.534      ;
+; 2.494  ; n_count[0]       ; n_count[0]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.715      ;
+; 2.509  ; n_count[30]      ; n_count[30]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.730      ;
+; 2.513  ; n_count[27]      ; n_count[27]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.734      ;
+; 2.663  ; y_present.Ga     ; y_present.Ga     ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 2.884      ;
+; 2.948  ; n_count[16]      ; n_count[17]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.169      ;
+; 2.948  ; n_count[6]       ; n_count[7]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.169      ;
+; 2.949  ; n_count[23]      ; n_count[24]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.170      ;
+; 2.949  ; n_count[13]      ; n_count[14]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.170      ;
+; 2.958  ; n_count[18]      ; n_count[19]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.179      ;
+; 2.958  ; n_count[17]      ; n_count[18]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.179      ;
+; 2.958  ; n_count[8]       ; n_count[9]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.179      ;
+; 2.958  ; n_count[7]       ; n_count[8]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.179      ;
+; 2.968  ; n_count[28]      ; n_count[29]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.189      ;
+; 2.973  ; n_count[26]      ; n_count[27]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.194      ;
+; 2.975  ; n_count[3]       ; n_count[4]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.196      ;
+; 3.059  ; n_count[16]      ; n_count[18]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.280      ;
+; 3.059  ; n_count[6]       ; n_count[8]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.280      ;
+; 3.060  ; n_count[23]      ; n_count[25]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.281      ;
+; 3.060  ; n_count[13]      ; n_count[15]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.281      ;
+; 3.069  ; n_count[18]      ; n_count[20]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.290      ;
+; 3.069  ; n_count[8]       ; n_count[10]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.290      ;
+; 3.069  ; n_count[17]      ; n_count[19]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.290      ;
+; 3.069  ; n_count[7]       ; n_count[9]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.290      ;
+; 3.079  ; n_count[28]      ; n_count[30]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.300      ;
+; 3.084  ; n_count[26]      ; n_count[28]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.305      ;
+; 3.086  ; n_count[3]       ; n_count[5]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.307      ;
+; 3.161  ; n_count[24]      ; n_count[25]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.382      ;
+; 3.161  ; n_count[14]      ; n_count[15]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.382      ;
+; 3.161  ; n_count[19]      ; n_count[20]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.382      ;
+; 3.161  ; n_count[9]       ; n_count[10]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.382      ;
+; 3.170  ; n_count[21]      ; n_count[22]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.391      ;
+; 3.170  ; n_count[11]      ; n_count[12]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.391      ;
+; 3.170  ; n_count[16]      ; n_count[19]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.391      ;
+; 3.170  ; n_count[6]       ; n_count[9]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.391      ;
+; 3.171  ; n_count[22]      ; n_count[23]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.392      ;
+; 3.171  ; n_count[12]      ; n_count[13]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.392      ;
+; 3.180  ; n_count[17]      ; n_count[20]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.401      ;
+; 3.180  ; n_count[7]       ; n_count[10]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.401      ;
+; 3.181  ; n_count[29]      ; n_count[30]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.402      ;
+; 3.190  ; n_count[4]       ; n_count[5]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.411      ;
+; 3.195  ; n_count[26]      ; n_count[29]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.416      ;
+; 3.219  ; n_count[2]       ; n_count[3]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.440      ;
+; 3.253  ; n_count[1]       ; n_count[2]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.474      ;
+; 3.281  ; n_count[21]      ; n_count[23]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.502      ;
+; 3.281  ; n_count[11]      ; n_count[13]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.502      ;
+; 3.281  ; n_count[16]      ; n_count[20]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.502      ;
+; 3.281  ; n_count[6]       ; n_count[10]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.502      ;
+; 3.282  ; n_count[22]      ; n_count[24]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.503      ;
+; 3.282  ; n_count[12]      ; n_count[14]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.503      ;
+; 3.306  ; n_count[26]      ; n_count[30]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.527      ;
+; 3.330  ; n_count[2]       ; n_count[4]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.551      ;
+; 3.345  ; n_count[27]      ; n_count[28]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.566      ;
+; 3.364  ; n_count[1]       ; n_count[3]       ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.585      ;
+; 3.371  ; y_present.Ni     ; y_present.Ni     ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.592      ;
+; 3.392  ; n_count[21]      ; n_count[24]      ; clock_music      ; clock_music ; 0.000        ; 0.000      ; 3.613      ;
++--------+------------------+------------------+------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Hold: 'y_present.Silent'                                                                                         ;
++--------+---------------+--------------+--------------+------------------+--------------+------------+------------+
+; Slack  ; From Node     ; To Node      ; Launch Clock ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------+--------------+--------------+------------------+--------------+------------+------------+
+; -0.069 ; y_present.Sa  ; LED[0]$latch ; clock_music  ; y_present.Silent ; -0.500       ; 2.417      ; 1.848      ;
+; -0.067 ; y_present.Ni  ; LED[6]$latch ; clock_music  ; y_present.Silent ; -0.500       ; 2.416      ; 1.849      ;
+; -0.058 ; y_present.Ma  ; LED[3]$latch ; clock_music  ; y_present.Silent ; -0.500       ; 2.411      ; 1.853      ;
+; -0.010 ; y_present.Pa  ; LED[4]$latch ; clock_music  ; y_present.Silent ; -0.500       ; 2.340      ; 1.830      ;
+; -0.008 ; y_present.Re  ; LED[1]$latch ; clock_music  ; y_present.Silent ; -0.500       ; 2.341      ; 1.833      ;
+; 0.035  ; y_present.Dha ; LED[5]$latch ; clock_music  ; y_present.Silent ; -0.500       ; 2.318      ; 1.853      ;
+; 0.105  ; y_present.Ga  ; LED[2]$latch ; clock_music  ; y_present.Silent ; -0.500       ; 2.412      ; 2.017      ;
++--------+---------------+--------------+--------------+------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk_50'                                                                                                                                    ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.650 ; toneGenerator:Sa1|toneOut        ; toneGenerator:Sa1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 1.871      ;
+; 1.937 ; toneGenerator:Sa1|count_sa1[0]   ; toneGenerator:Sa1|count_sa1[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.158      ;
+; 2.116 ; toneGenerator:Ga1|toneOut        ; toneGenerator:Ga1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.337      ;
+; 2.117 ; toneGenerator:Ma1|toneOut        ; toneGenerator:Ma1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.338      ;
+; 2.135 ; toneGenerator:Ni1|count_sa7[0]   ; toneGenerator:Ni1|count_sa7[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.356      ;
+; 2.135 ; toneGenerator:Ga1|count_sa3[0]   ; toneGenerator:Ga1|count_sa3[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.356      ;
+; 2.136 ; toneGenerator:Re1|toneOut        ; toneGenerator:Re1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.357      ;
+; 2.217 ; clk_c                            ; clock_music                      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.438      ;
+; 2.221 ; toneGenerator:Dha1|toneOut       ; toneGenerator:Dha1|toneOut       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.442      ;
+; 2.230 ; toneGenerator:Pa1|toneOut        ; toneGenerator:Pa1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.451      ;
+; 2.233 ; toneGenerator:Re1|count_sa2[0]   ; toneGenerator:Re1|count_sa2[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.454      ;
+; 2.572 ; timecounter[24]                  ; timecounter[17]                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.793      ;
+; 2.575 ; timecounter[24]                  ; clock_music                      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.796      ;
+; 2.577 ; timecounter[24]                  ; timecounter[16]                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.798      ;
+; 2.578 ; timecounter[24]                  ; timecounter[19]                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.799      ;
+; 2.622 ; toneGenerator:Pa1|count_sa5[17]  ; toneGenerator:Pa1|count_sa5[11]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.843      ;
+; 2.638 ; toneGenerator:Ni1|toneOut        ; toneGenerator:Ni1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.859      ;
+; 2.648 ; toneGenerator:Ma1|count_sa4[0]   ; toneGenerator:Ma1|count_sa4[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.869      ;
+; 2.654 ; toneGenerator:Sa1|count_sa1[2]   ; toneGenerator:Sa1|count_sa1[7]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.875      ;
+; 2.657 ; toneGenerator:Ga1|count_sa3[17]  ; toneGenerator:Ga1|count_sa3[8]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.878      ;
+; 2.662 ; toneGenerator:Ga1|count_sa3[17]  ; toneGenerator:Ga1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.883      ;
+; 2.690 ; toneGenerator:Sa1|count_sa1[17]  ; toneGenerator:Sa1|count_sa1[9]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.911      ;
+; 2.691 ; toneGenerator:Sa1|count_sa1[17]  ; toneGenerator:Sa1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.912      ;
+; 2.692 ; toneGenerator:Sa1|count_sa1[17]  ; toneGenerator:Sa1|count_sa1[10]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.913      ;
+; 2.693 ; toneGenerator:Sa1|count_sa1[17]  ; toneGenerator:Sa1|count_sa1[12]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 2.914      ;
+; 2.825 ; toneGenerator:Ma1|count_sa4[25]  ; toneGenerator:Ma1|count_sa4[25]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.046      ;
+; 2.825 ; toneGenerator:Sa1|count_sa1[25]  ; toneGenerator:Sa1|count_sa1[25]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.046      ;
+; 2.831 ; toneGenerator:Dha1|count_sa6[19] ; toneGenerator:Dha1|count_sa6[19] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.052      ;
+; 2.834 ; timecounter[3]                   ; timecounter[3]                   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.055      ;
+; 2.835 ; toneGenerator:Pa1|count_sa5[23]  ; toneGenerator:Pa1|count_sa5[23]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.056      ;
+; 2.913 ; toneGenerator:Re1|count_sa2[12]  ; toneGenerator:Re1|count_sa2[13]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.134      ;
+; 2.954 ; toneGenerator:Re1|count_sa2[17]  ; toneGenerator:Re1|count_sa2[16]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.175      ;
+; 2.978 ; toneGenerator:Re1|count_sa2[9]   ; toneGenerator:Re1|count_sa2[13]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.199      ;
+; 2.981 ; toneGenerator:Dha1|count_sa6[24] ; toneGenerator:Dha1|count_sa6[24] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.202      ;
+; 2.991 ; toneGenerator:Pa1|count_sa5[24]  ; toneGenerator:Pa1|count_sa5[24]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.212      ;
+; 3.051 ; timecounter[5]                   ; timecounter[11]                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.272      ;
+; 3.056 ; toneGenerator:Sa1|count_sa1[17]  ; toneGenerator:Sa1|count_sa1[6]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.277      ;
+; 3.056 ; timecounter[5]                   ; timecounter[18]                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.277      ;
+; 3.057 ; toneGenerator:Sa1|count_sa1[17]  ; toneGenerator:Sa1|count_sa1[3]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.278      ;
+; 3.058 ; toneGenerator:Sa1|count_sa1[17]  ; toneGenerator:Sa1|count_sa1[5]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.279      ;
+; 3.058 ; toneGenerator:Sa1|count_sa1[17]  ; toneGenerator:Sa1|count_sa1[15]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.279      ;
+; 3.069 ; toneGenerator:Dha1|count_sa6[8]  ; toneGenerator:Dha1|count_sa6[10] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.290      ;
+; 3.071 ; toneGenerator:Dha1|count_sa6[8]  ; toneGenerator:Dha1|count_sa6[2]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.292      ;
+; 3.073 ; clk_c                            ; clk_c                            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.294      ;
+; 3.074 ; toneGenerator:Dha1|count_sa6[8]  ; toneGenerator:Dha1|count_sa6[5]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.295      ;
+; 3.077 ; timecounter[21]                  ; timecounter[17]                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.298      ;
+; 3.080 ; timecounter[21]                  ; clock_music                      ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.301      ;
+; 3.082 ; timecounter[21]                  ; timecounter[16]                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.303      ;
+; 3.083 ; timecounter[21]                  ; timecounter[19]                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.304      ;
+; 3.089 ; timecounter[5]                   ; timecounter[14]                  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.310      ;
+; 3.098 ; timecounter[6]                   ; timecounter[6]                   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.319      ;
+; 3.101 ; toneGenerator:Pa1|count_sa5[3]   ; toneGenerator:Pa1|count_sa5[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.322      ;
+; 3.101 ; toneGenerator:Re1|count_sa2[26]  ; toneGenerator:Re1|count_sa2[26]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.322      ;
+; 3.103 ; toneGenerator:Pa1|count_sa5[3]   ; toneGenerator:Pa1|count_sa5[10]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.324      ;
+; 3.112 ; toneGenerator:Pa1|count_sa5[3]   ; toneGenerator:Pa1|count_sa5[8]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.333      ;
+; 3.113 ; toneGenerator:Pa1|count_sa5[3]   ; toneGenerator:Pa1|count_sa5[6]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.334      ;
+; 3.114 ; toneGenerator:Pa1|count_sa5[3]   ; toneGenerator:Pa1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.335      ;
+; 3.133 ; toneGenerator:Ni1|count_sa7[17]  ; toneGenerator:Ni1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.354      ;
+; 3.186 ; toneGenerator:Ma1|count_sa4[17]  ; toneGenerator:Ma1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.407      ;
+; 3.192 ; toneGenerator:Ni1|count_sa7[1]   ; toneGenerator:Ni1|count_sa7[3]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.413      ;
+; 3.192 ; toneGenerator:Ni1|count_sa7[1]   ; toneGenerator:Ni1|count_sa7[13]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.413      ;
+; 3.196 ; toneGenerator:Ma1|count_sa4[14]  ; toneGenerator:Ma1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.417      ;
+; 3.196 ; toneGenerator:Ni1|count_sa7[1]   ; toneGenerator:Ni1|count_sa7[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.417      ;
+; 3.196 ; toneGenerator:Ma1|count_sa4[14]  ; toneGenerator:Ma1|count_sa4[16]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.417      ;
+; 3.197 ; toneGenerator:Ma1|count_sa4[14]  ; toneGenerator:Ma1|count_sa4[12]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.418      ;
+; 3.198 ; toneGenerator:Ma1|count_sa4[14]  ; toneGenerator:Ma1|count_sa4[13]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.419      ;
+; 3.209 ; toneGenerator:Ga1|count_sa3[17]  ; toneGenerator:Ga1|count_sa3[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.430      ;
+; 3.216 ; toneGenerator:Ga1|count_sa3[17]  ; toneGenerator:Ga1|count_sa3[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.437      ;
+; 3.218 ; toneGenerator:Ga1|count_sa3[17]  ; toneGenerator:Ga1|count_sa3[10]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.439      ;
+; 3.220 ; toneGenerator:Sa1|count_sa1[2]   ; toneGenerator:Sa1|count_sa1[16]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.441      ;
+; 3.222 ; toneGenerator:Pa1|count_sa5[24]  ; toneGenerator:Pa1|count_sa5[9]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.443      ;
+; 3.225 ; toneGenerator:Ga1|count_sa3[17]  ; toneGenerator:Ga1|count_sa3[7]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.446      ;
+; 3.227 ; toneGenerator:Sa1|count_sa1[2]   ; toneGenerator:Sa1|count_sa1[15]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.448      ;
+; 3.227 ; toneGenerator:Ga1|count_sa3[17]  ; toneGenerator:Ga1|count_sa3[1]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.448      ;
+; 3.234 ; toneGenerator:Sa1|count_sa1[2]   ; toneGenerator:Sa1|count_sa1[6]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.455      ;
+; 3.235 ; toneGenerator:Sa1|count_sa1[2]   ; toneGenerator:Sa1|count_sa1[3]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.456      ;
+; 3.236 ; toneGenerator:Sa1|count_sa1[2]   ; toneGenerator:Sa1|count_sa1[5]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.457      ;
+; 3.240 ; toneGenerator:Ga1|count_sa3[24]  ; toneGenerator:Ga1|count_sa3[14]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.461      ;
+; 3.259 ; timecounter[5]                   ; timecounter[9]                   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.480      ;
+; 3.281 ; toneGenerator:Pa1|count_sa5[17]  ; toneGenerator:Pa1|count_sa5[16]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.502      ;
+; 3.299 ; toneGenerator:Pa1|count_sa5[3]   ; toneGenerator:Pa1|count_sa5[16]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.520      ;
+; 3.321 ; toneGenerator:Dha1|count_sa6[8]  ; toneGenerator:Dha1|count_sa6[13] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.542      ;
+; 3.322 ; toneGenerator:Dha1|count_sa6[8]  ; toneGenerator:Dha1|toneOut       ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.543      ;
+; 3.322 ; toneGenerator:Dha1|count_sa6[8]  ; toneGenerator:Dha1|count_sa6[12] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.543      ;
+; 3.322 ; toneGenerator:Ma1|count_sa4[17]  ; toneGenerator:Ma1|count_sa4[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.543      ;
+; 3.323 ; toneGenerator:Re1|count_sa2[17]  ; toneGenerator:Re1|count_sa2[0]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.544      ;
+; 3.325 ; toneGenerator:Pa1|count_sa5[17]  ; toneGenerator:Pa1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.546      ;
+; 3.328 ; toneGenerator:Pa1|count_sa5[17]  ; toneGenerator:Pa1|count_sa5[6]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.549      ;
+; 3.330 ; toneGenerator:Pa1|count_sa5[17]  ; toneGenerator:Pa1|count_sa5[8]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.551      ;
+; 3.331 ; toneGenerator:Ma1|count_sa4[17]  ; toneGenerator:Ma1|count_sa4[1]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.552      ;
+; 3.334 ; toneGenerator:Re1|count_sa2[17]  ; toneGenerator:Re1|count_sa2[5]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.555      ;
+; 3.335 ; toneGenerator:Re1|count_sa2[17]  ; toneGenerator:Re1|count_sa2[4]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.556      ;
+; 3.339 ; toneGenerator:Pa1|count_sa5[17]  ; toneGenerator:Pa1|count_sa5[2]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.560      ;
+; 3.362 ; toneGenerator:Re1|count_sa2[12]  ; toneGenerator:Re1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.583      ;
+; 3.379 ; timecounter[24]                  ; clk_c                            ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.600      ;
+; 3.404 ; toneGenerator:Pa1|count_sa5[26]  ; toneGenerator:Pa1|count_sa5[26]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.625      ;
+; 3.414 ; toneGenerator:Dha1|count_sa6[26] ; toneGenerator:Dha1|count_sa6[26] ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.635      ;
+; 3.427 ; toneGenerator:Re1|count_sa2[9]   ; toneGenerator:Re1|toneOut        ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.648      ;
+; 3.443 ; toneGenerator:Ni1|count_sa7[17]  ; toneGenerator:Ni1|count_sa7[3]   ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.664      ;
+; 3.443 ; toneGenerator:Ni1|count_sa7[17]  ; toneGenerator:Ni1|count_sa7[13]  ; clk_50       ; clk_50      ; 0.000        ; 0.000      ; 3.664      ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------+
+; Setup Transfers                                                                 ;
++------------------+------------------+----------+----------+----------+----------+
+; From Clock       ; To Clock         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------+------------------+----------+----------+----------+----------+
+; clk_50           ; clk_50           ; 7389     ; 0        ; 0        ; 0        ;
+; clock_music      ; clock_music      ; 6725     ; 0        ; 0        ; 0        ;
+; y_present.Silent ; clock_music      ; 51       ; 51       ; 0        ; 0        ;
+; clock_music      ; y_present.Silent ; 0        ; 0        ; 7        ; 0        ;
++------------------+------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------+
+; Hold Transfers                                                                  ;
++------------------+------------------+----------+----------+----------+----------+
+; From Clock       ; To Clock         ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------+------------------+----------+----------+----------+----------+
+; clk_50           ; clk_50           ; 7389     ; 0        ; 0        ; 0        ;
+; clock_music      ; clock_music      ; 6725     ; 0        ; 0        ; 0        ;
+; y_present.Silent ; clock_music      ; 51       ; 51       ; 0        ; 0        ;
+; clock_music      ; y_present.Silent ; 0        ; 0        ; 7        ; 0        ;
++------------------+------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 40    ; 40   ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 21    ; 21   ;
++---------------------------------+-------+------+
+
+
++----------------------------------------------------------+
+; Clock Status Summary                                     ;
++------------------+------------------+------+-------------+
+; Target           ; Clock            ; Type ; Status      ;
++------------------+------------------+------+-------------+
+; clk_50           ; clk_50           ; Base ; Constrained ;
+; clock_music      ; clock_music      ; Base ; Constrained ;
+; y_present.Silent ; y_present.Silent ; Base ; Constrained ;
++------------------+------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; resetn     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; LED[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; toneOut     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; resetn     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; LED[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; toneOut     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Thu Apr 01 17:15:51 2021
+Info: Command: quartus_sta Exp6 -c song_tb
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Warning (335093): The Timing Analyzer is analyzing 7 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'song_tb.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name y_present.Silent y_present.Silent
+    Info (332105): create_clock -period 1.000 -name clock_music clock_music
+    Info (332105): create_clock -period 1.000 -name clk_50 clk_50
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -14.021
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -14.021            -488.804 clock_music 
+    Info (332119):    -8.388           -1429.533 clk_50 
+    Info (332119):    -0.995              -5.417 y_present.Silent 
+Info (332146): Worst-case hold slack is -2.706
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.706              -2.971 clock_music 
+    Info (332119):    -0.069              -0.212 y_present.Silent 
+    Info (332119):     1.650               0.000 clk_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 clk_50 
+    Info (332119):     0.234               0.000 clock_music 
+    Info (332119):     0.500               0.000 y_present.Silent 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4690 megabytes
+    Info: Processing ended: Thu Apr 01 17:15:53 2021
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

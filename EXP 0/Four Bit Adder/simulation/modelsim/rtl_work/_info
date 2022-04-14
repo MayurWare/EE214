@@ -1,0 +1,527 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/4. SPRING 2021/EE214/EXP 0/Four Bit Adder/simulation/modelsim
+Eand_2
+Z1 w1611927613
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z4 8E:/4. SPRING 2021/EE214/EXP 0/Four Bit Adder/Gates.vhd
+Z5 FE:/4. SPRING 2021/EE214/EXP 0/Four Bit Adder/Gates.vhd
+l0
+L57 1
+V7VX<DG5>4A3ngdn=6FPYH1
+!s100 4?c?CM[7NVH:G48o4W5E@2
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1611929026
+!i10b 1
+Z8 !s108 1611929026.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|E:/4. SPRING 2021/EE214/EXP 0/Four Bit Adder/Gates.vhd|
+Z10 !s107 E:/4. SPRING 2021/EE214/EXP 0/Four Bit Adder/Gates.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Aequations
+R2
+R3
+DEx4 work 5 and_2 0 22 7VX<DG5>4A3ngdn=6FPYH1
+!i122 1
+l62
+L61 4
+Veo8K[[ji_hBMeemQ9h8I72
+!s100 WeKPZUSOKi2eb^m]R_4ld2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edut
+Z13 w1611762457
+R2
+R3
+!i122 0
+R0
+Z14 8E:/4. SPRING 2021/EE214/EXP 0/Four Bit Adder/DUT.vhd
+Z15 FE:/4. SPRING 2021/EE214/EXP 0/Four Bit Adder/DUT.vhd
+l0
+L3 1
+V3SOl3LmC?LlVGnV@DLGDB1
+!s100 hd?_OmLa`_[UcMfolCk:f0
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|E:/4. SPRING 2021/EE214/EXP 0/Four Bit Adder/DUT.vhd|
+Z17 !s107 E:/4. SPRING 2021/EE214/EXP 0/Four Bit Adder/DUT.vhd|
+!i113 1
+R11
+R12
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 3SOl3LmC?LlVGnV@DLGDB1
+!i122 0
+l13
+L8 24
+Vcg;ikmXAP_QkWkCKL3Ed]0
+!s100 @_b5M:LA]nlAg3>ZT=3<J3
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Efour_bit_adder
+Z18 w1611927617
+Z19 DPx4 work 5 gates 0 22 P57Rz][zj^`fZZf[A]aK:0
+R2
+R3
+!i122 2
+R0
+Z20 8E:/4. SPRING 2021/EE214/EXP 0/Four Bit Adder/Four_Bit_Adder.vhd
+Z21 FE:/4. SPRING 2021/EE214/EXP 0/Four Bit Adder/Four_Bit_Adder.vhd
+l0
+L7 1
+Vif1TZ]=2GBnD=aG6Q[UEO2
+!s100 O93KEOj@n_HPz[oWMlW=P3
+R6
+31
+Z22 !s110 1611929027
+!i10b 1
+R8
+Z23 !s90 -reportprogress|300|-93|-work|work|E:/4. SPRING 2021/EE214/EXP 0/Four Bit Adder/Four_Bit_Adder.vhd|
+Z24 !s107 E:/4. SPRING 2021/EE214/EXP 0/Four Bit Adder/Four_Bit_Adder.vhd|
+!i113 1
+R11
+R12
+Astruct
+R19
+R2
+R3
+DEx4 work 14 four_bit_adder 0 22 if1TZ]=2GBnD=aG6Q[UEO2
+!i122 2
+l13
+L11 17
+VlkZ6ZDN=S?JmR6zcg6=B10
+!s100 QPY1TPU6n7cZ9`8dFJa>M1
+R6
+31
+R22
+!i10b 1
+R8
+R23
+R24
+!i113 1
+R11
+R12
+Efull_adder
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L136 1
+V^=a]9@?mzD9Oi0ePW8L[=2
+!s100 zQi@Af[XdbfS:R7Y<R:HQ2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 10 full_adder 0 22 ^=a]9@?mzD9Oi0ePW8L[=2
+!i122 1
+l140
+L139 5
+VC?0b=8F:GgNVZOYCJLkd33
+!s100 `K_PH>MF4P9OE195__Ad:3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Pgates
+R2
+R3
+!i122 1
+R1
+R0
+R4
+R5
+l0
+L3 1
+VP57Rz][zj^`fZZf[A]aK:0
+!s100 d]E6a^2[2eEQBOz=JPeVd2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ehalf_adder
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L124 1
+VhEZN[Da_KHHVHn;eK^d1f0
+!s100 <TQmc@AXiN@<QmOAEiFmX2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 10 half_adder 0 22 hEZN[Da_KHHVHn;eK^d1f0
+!i122 1
+l129
+L128 5
+V1j=ZQCF3Zb2Vh3SH_?zge2
+!s100 8^b7NCcUaLggLeW8ETTDc0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Einvert_1
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L45 1
+VRc=G9V>@HmoN09Fl3gIoW1
+!s100 `;ohGKSNo00enV=g34Z@@3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 8 invert_1 0 22 Rc=G9V>@HmoN09Fl3gIoW1
+!i122 1
+l50
+L49 4
+V4^FjPeB:kR`9:bTdFLX561
+!s100 X4d]C974=mK1lQ41XT;oR0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Enand_2
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L68 1
+VI_[mi2Yj@FU:iZoCk1ncb3
+!s100 CQBg1XUmT7Mea2K77Edfl2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 6 nand_2 0 22 I_[mi2Yj@FU:iZoCk1ncb3
+!i122 1
+l73
+L72 4
+VL1DeaK2O0]1hSBNj=UlF`0
+!s100 QLEY[2[:3L=k=7dOTYHoE3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Enor_2
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L90 1
+VogzO`_GihhcAH]ekMD1;R3
+!s100 5?]CC]8cCjUlPL5G<<EcG2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 5 nor_2 0 22 ogzO`_GihhcAH]ekMD1;R3
+!i122 1
+l95
+L94 4
+VE6bhBOihYPbiAIKL]jozE2
+!s100 ^GQf298iJMgZlWjXRFQ6L2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eor_2
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L79 1
+V9JbV9H@5EB6YHP@oH8JNL1
+!s100 HOTM8Rz5]_aChLE0AUhU<2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 4 or_2 0 22 9JbV9H@5EB6YHP@oH8JNL1
+!i122 1
+l84
+L83 4
+VJ@kVl[@8algRD<IE9@6:F3
+!s100 ]>`X0ZmL:BDS_ScGl1lXM0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etestbench
+Z25 w1611769989
+R3
+R2
+!i122 3
+R0
+Z26 8E:/4. SPRING 2021/EE214/EXP 0/Four Bit Adder/Testbench.vhd
+Z27 FE:/4. SPRING 2021/EE214/EXP 0/Four Bit Adder/Testbench.vhd
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R22
+!i10b 1
+Z28 !s108 1611929027.000000
+Z29 !s90 -reportprogress|300|-93|-work|work|E:/4. SPRING 2021/EE214/EXP 0/Four Bit Adder/Testbench.vhd|
+!s107 E:/4. SPRING 2021/EE214/EXP 0/Four Bit Adder/Testbench.vhd|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 3
+l69
+L9 132
+VJC0>33f9_iD=?gJ;3:DfX0
+!s100 9mH=VYPL0BgQP@WaVKHoP2
+R6
+31
+R22
+!i10b 1
+R28
+R29
+Z30 !s107 E:/4. SPRING 2021/EE214/EXP 0/Four Bit Adder/Testbench.vhd|
+!i113 1
+R11
+R12
+Exnor_2
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L113 1
+Vn]f_nce;@ELHSnOCeJiEa0
+!s100 _kS4WPkTN8?<L3aVCbOKj2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 6 xnor_2 0 22 n]f_nce;@ELHSnOCeJiEa0
+!i122 1
+l118
+L117 4
+Vk3D@o]hd@IYF1GH[kj1N>2
+!s100 []l=;S8_;Ua?2zUbgSh[z0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Exor_2
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L102 1
+V8b_2Jn0Wc^1JQM1^E1a?@0
+!s100 3bRfHKT@F^>a7k^ZL^YEW1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 5 xor_2 0 22 8b_2Jn0Wc^1JQM1^E1a?@0
+!i122 1
+l107
+L106 4
+V_zzHS3KT^62N084Hd5>ZB0
+!s100 @D<5S3>3YdlWWF8hJ@F870
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12

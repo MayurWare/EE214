@@ -1,0 +1,116 @@
+# Reading pref.tcl
+# do DUT_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {P:/EE214/Part3/DUT.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:42:03 on Feb 14,2021
+# vcom -reportprogress 300 -93 -work work P:/EE214/Part3/DUT.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DUT
+# -- Compiling architecture DutWrap of DUT
+# End time: 21:42:03 on Feb 14,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {P:/EE214/Part3/Gates.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:42:03 on Feb 14,2021
+# vcom -reportprogress 300 -93 -work work P:/EE214/Part3/Gates.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package Gates
+# -- Compiling entity Invert_1
+# -- Compiling architecture Equations of Invert_1
+# -- Compiling entity And_2
+# -- Compiling architecture Equations of And_2
+# -- Compiling entity Nand_2
+# -- Compiling architecture Equations of Nand_2
+# -- Compiling entity Or_2
+# -- Compiling architecture Equations of Or_2
+# -- Compiling entity Or_3
+# -- Compiling architecture Equations of Or_3
+# -- Compiling entity Nor_2
+# -- Compiling architecture Equations of Nor_2
+# -- Compiling entity Xor_2
+# -- Compiling architecture Equations of Xor_2
+# -- Compiling entity Xnor_2
+# -- Compiling architecture Equations of Xnor_2
+# -- Compiling entity Half_Adder
+# -- Compiling architecture Equations of Half_Adder
+# -- Compiling entity Full_Adder
+# -- Compiling architecture Equations of Full_Adder
+# -- Compiling entity Four_Bit_Adder
+# -- Compiling architecture Equations of Four_Bit_Adder
+# -- Compiling entity BCD_Adder
+# -- Compiling architecture Equations of BCD_Adder
+# -- Compiling entity Eight_Bit_Multiply
+# -- Compiling architecture Equations of Eight_Bit_Multiply
+# -- Compiling entity Eight_Bit_Adder
+# -- Compiling architecture Equations of Eight_Bit_Adder
+# End time: 21:42:03 on Feb 14,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {P:/EE214/Part3/Part3.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:42:04 on Feb 14,2021
+# vcom -reportprogress 300 -93 -work work P:/EE214/Part3/Part3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity Part3
+# -- Compiling architecture Struct of Part3
+# End time: 21:42:04 on Feb 14,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {P:/EE214/Part3/Testbench.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:42:04 on Feb 14,2021
+# vcom -reportprogress 300 -93 -work work P:/EE214/Part3/Testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behave of Testbench
+# End time: 21:42:05 on Feb 14,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 21:42:05 on Feb 14,2021
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behave)
+# Loading work.dut(dutwrap)
+# Loading work.gates
+# Loading work.part3(struct)
+# Loading work.invert_1(equations)
+# Loading work.or_2(equations)
+# Loading work.bcd_adder(equations)
+# Loading work.four_bit_adder(equations)
+# Loading work.full_adder(equations)
+# Loading work.and_2(equations)
+# Loading work.or_3(equations)
+# Loading work.eight_bit_multiply(equations)
+# Loading work.eight_bit_adder(equations)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: SUCCESS, all tests passed.
+#    Time: 6144 ns  Iteration: 0  Instance: /testbench
+# End time: 21:43:41 on Feb 14,2021, Elapsed time: 0:01:36
+# Errors: 0, Warnings: 0

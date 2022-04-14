@@ -1,0 +1,80 @@
+|DUT
+input_vector[0] => Four_Bit_Adder:add_instance.A0
+input_vector[1] => Four_Bit_Adder:add_instance.A1
+input_vector[2] => Four_Bit_Adder:add_instance.A2
+input_vector[3] => Four_Bit_Adder:add_instance.A3
+input_vector[4] => Four_Bit_Adder:add_instance.B0
+input_vector[5] => Four_Bit_Adder:add_instance.B1
+input_vector[6] => Four_Bit_Adder:add_instance.B2
+input_vector[7] => Four_Bit_Adder:add_instance.B3
+output_vector[0] << Four_Bit_Adder:add_instance.R0
+output_vector[1] << Four_Bit_Adder:add_instance.R1
+output_vector[2] << Four_Bit_Adder:add_instance.R2
+output_vector[3] << Four_Bit_Adder:add_instance.R3
+output_vector[4] << Four_Bit_Adder:add_instance.Cout
+
+
+|DUT|Four_Bit_Adder:add_instance
+B3 => Full_Adder:FA3.A
+A3 => Full_Adder:FA3.B
+B2 => Full_Adder:FA2.A
+A2 => Full_Adder:FA2.B
+B1 => Full_Adder:FA1.A
+A1 => Full_Adder:FA1.B
+B0 => Half_Adder:HA1.A
+A0 => Half_Adder:HA1.B
+R3 <= Full_Adder:FA3.S
+R2 <= Full_Adder:FA2.S
+R1 <= Full_Adder:FA1.S
+R0 <= Half_Adder:HA1.S
+Cout <= Full_Adder:FA3.Cout
+
+
+|DUT|Four_Bit_Adder:add_instance|Half_Adder:HA1
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Four_Bit_Adder:add_instance|Full_Adder:FA1
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Four_Bit_Adder:add_instance|Full_Adder:FA2
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Four_Bit_Adder:add_instance|Full_Adder:FA3
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,570 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/4. SPRING 2021/EE214/EXP 1/Part1/simulation/modelsim
+Eand_2
+Z1 w1613251726
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z4 8E:/4. SPRING 2021/EE214/EXP 1/Part1/Gates.vhd
+Z5 FE:/4. SPRING 2021/EE214/EXP 1/Part1/Gates.vhd
+l0
+L62 1
+V<L:Kb@0zHdl`AWT1en51]3
+!s100 V7e`OKK^_d8IARFCk=bJ[1
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1613815648
+!i10b 1
+Z8 !s108 1613815648.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|E:/4. SPRING 2021/EE214/EXP 1/Part1/Gates.vhd|
+Z10 !s107 E:/4. SPRING 2021/EE214/EXP 1/Part1/Gates.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Aequations
+R2
+R3
+DEx4 work 5 and_2 0 22 <L:Kb@0zHdl`AWT1en51]3
+!i122 1
+l67
+L66 4
+VCMa_YgnfOFbKcdA[cUbf50
+!s100 zTDCI?UmfFTok6_EiAF_Y1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edut
+Z13 w1613251694
+R2
+R3
+!i122 0
+R0
+Z14 8E:/4. SPRING 2021/EE214/EXP 1/Part1/DUT.vhd
+Z15 FE:/4. SPRING 2021/EE214/EXP 1/Part1/DUT.vhd
+l0
+L3 1
+VALQA_b^UH`6?XznoQzGWm0
+!s100 <5NI6QBlXQlaCYB8`]z[a0
+R6
+31
+R7
+!i10b 1
+Z16 !s108 1613815647.000000
+Z17 !s90 -reportprogress|300|-93|-work|work|E:/4. SPRING 2021/EE214/EXP 1/Part1/DUT.vhd|
+Z18 !s107 E:/4. SPRING 2021/EE214/EXP 1/Part1/DUT.vhd|
+!i113 1
+R11
+R12
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 ALQA_b^UH`6?XznoQzGWm0
+!i122 0
+l12
+L7 18
+V]D96nNaBFYG0WVj0n^P:73
+!s100 n3LaNQNP`_KeFnkd3JiC41
+R6
+31
+R7
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R11
+R12
+Efour_bit_adder
+R1
+Z19 DPx4 work 5 gates 0 22 5@=R<@zm<J:C8GWoPikAP2
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L154 1
+V2K]E[326fBEE5dPiG`NLP0
+!s100 k<oRTa0=zHOYBZ3GeN_3?1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Astruct
+R19
+R2
+R3
+DEx4 work 14 four_bit_adder 0 22 2K]E[326fBEE5dPiG`NLP0
+!i122 1
+l160
+L158 17
+V:^V[^IPMG51a_[YjBlX1:3
+!s100 B[L9M]AlV@dDWXkXOa>P81
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Efull_adder
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L141 1
+Vj7N8oLG84o309:X<:MYzj0
+!s100 WBiNh:0mITI:SJjKII^H<3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 10 full_adder 0 22 j7N8oLG84o309:X<:MYzj0
+!i122 1
+l145
+L144 5
+V_zW4b8FFKQ=PZFRH^WkWi2
+!s100 g[8Tab[b3OX@B:L1ioJ_`2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Pgates
+R2
+R3
+!i122 1
+R1
+R0
+R4
+R5
+l0
+L3 1
+V5@=R<@zm<J:C8GWoPikAP2
+!s100 Yb[j8>BE3I2YkJWl^zR@G2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ehalf_adder
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L129 1
+VLL^HDG`DUf^ce?4eGoobU3
+!s100 E^`X7mQG_G:Ym3HO2ARaW3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 10 half_adder 0 22 LL^HDG`DUf^ce?4eGoobU3
+!i122 1
+l134
+L133 5
+VXb2R@4m7CaOzA][@k9FoN3
+!s100 o:@=l:o20gQ`_Tf4O??]a1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Einvert_1
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L50 1
+VWm6b=o_8Jeg<?XeAOm@b`1
+!s100 @d3RCi]UHDk2:Pe[i]YGz3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 8 invert_1 0 22 Wm6b=o_8Jeg<?XeAOm@b`1
+!i122 1
+l55
+L54 4
+VJ8H2T7z>OdWmD5<kKdeGY3
+!s100 gKDdI5PO2Hj`@X8j2IQj52
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Enand_2
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L73 1
+V;08[72c]g[H;3LC?aIJjB0
+!s100 F<e`eDlhINMHP7T]`mWF91
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 6 nand_2 0 22 ;08[72c]g[H;3LC?aIJjB0
+!i122 1
+l78
+L77 4
+VM]^bLVbchZJe2<iQ@f5Ej0
+!s100 WQMJ[?e2@@H47]XdPJO8`2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Enor_2
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L95 1
+VD1F<[_cI^6fof?o`zjXHW3
+!s100 `D83Pa6IzXeoMjnRcQCVX0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 5 nor_2 0 22 D1F<[_cI^6fof?o`zjXHW3
+!i122 1
+l100
+L99 4
+VLRVM>hamI;6bF7PzRT00D1
+!s100 >R1TnTdef4>KH:U3HJCC^3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eor_2
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L84 1
+VcQzGKSGHHTV2bzmj0[g;C2
+!s100 EzHz3Aj02=ViUTLE>GoD<3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 4 or_2 0 22 cQzGKSGHHTV2bzmj0[g;C2
+!i122 1
+l89
+L88 4
+V83`?[EIF1SA8Pe^_2o?_50
+!s100 h^E7^RNjl04cZc8gXL7?:3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Epart1
+Z20 w1613251752
+R19
+R2
+R3
+!i122 2
+R0
+Z21 8E:/4. SPRING 2021/EE214/EXP 1/Part1/Part1.vhd
+Z22 FE:/4. SPRING 2021/EE214/EXP 1/Part1/Part1.vhd
+l0
+L7 1
+VQ;NlbN2Ub>0bPcjPMk>Q80
+!s100 2I9lzkjc]R@Edo<[cmKF42
+R6
+31
+R7
+!i10b 1
+R8
+Z23 !s90 -reportprogress|300|-93|-work|work|E:/4. SPRING 2021/EE214/EXP 1/Part1/Part1.vhd|
+Z24 !s107 E:/4. SPRING 2021/EE214/EXP 1/Part1/Part1.vhd|
+!i113 1
+R11
+R12
+Astruct
+R19
+R2
+R3
+DEx4 work 5 part1 0 22 Q;NlbN2Ub>0bPcjPMk>Q80
+!i122 2
+l13
+L11 12
+V0N>KbROiHAn^Ec36J1AH`0
+!s100 NRMFZkC@P;bDT^bngCa721
+R6
+31
+R7
+!i10b 1
+R8
+R23
+R24
+!i113 1
+R11
+R12
+Etestbench
+Z25 w1613251800
+R3
+R2
+!i122 3
+R0
+Z26 8E:/4. SPRING 2021/EE214/EXP 1/Part1/Testbench.vhd
+Z27 FE:/4. SPRING 2021/EE214/EXP 1/Part1/Testbench.vhd
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R7
+!i10b 1
+R8
+Z28 !s90 -reportprogress|300|-93|-work|work|E:/4. SPRING 2021/EE214/EXP 1/Part1/Testbench.vhd|
+!s107 E:/4. SPRING 2021/EE214/EXP 1/Part1/Testbench.vhd|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 3
+l69
+L9 132
+VKeh^PJ8A0VU?NeYjTWGGZ0
+!s100 _5@HH[LKe@VBQjMPe0=om3
+R6
+31
+R7
+!i10b 1
+R8
+R28
+Z29 !s107 E:/4. SPRING 2021/EE214/EXP 1/Part1/Testbench.vhd|
+!i113 1
+R11
+R12
+Exnor_2
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L118 1
+V8UPV;lmRGRCWI62a<67cO3
+!s100 zDkY^1j@NCaUf?na=0@:l3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 6 xnor_2 0 22 8UPV;lmRGRCWI62a<67cO3
+!i122 1
+l123
+L122 4
+VJ:_[nO<=Ic5^ZkS3i?Uk_0
+!s100 TS1U2_YSk3CTa`Y_`i64n0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Exor_2
+R1
+R2
+R3
+!i122 1
+R0
+R4
+R5
+l0
+L107 1
+VeLIKIEkg4BD5E7?8N>WH?0
+!s100 aQ]gOg_0:^SP<?=<2jId=2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 5 xor_2 0 22 eLIKIEkg4BD5E7?8N>WH?0
+!i122 1
+l112
+L111 4
+VGb5]2K=]8eBc]H[M<A9<Z1
+!s100 O1=Na`0`3jNk=gZmg>k3U3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12

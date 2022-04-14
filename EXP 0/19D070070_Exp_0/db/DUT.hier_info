@@ -1,0 +1,194 @@
+|DUT
+input_vector[0] => Exp_0_EE214:add_instance.X[0]
+input_vector[1] => Exp_0_EE214:add_instance.X[1]
+input_vector[2] => Exp_0_EE214:add_instance.X[2]
+input_vector[3] => Exp_0_EE214:add_instance.X[3]
+input_vector[4] => Exp_0_EE214:add_instance.X[4]
+input_vector[5] => Exp_0_EE214:add_instance.X[5]
+input_vector[6] => Exp_0_EE214:add_instance.X[6]
+input_vector[7] => Exp_0_EE214:add_instance.X[7]
+output_vector[0] << Exp_0_EE214:add_instance.Y[0]
+output_vector[1] << Exp_0_EE214:add_instance.Y[1]
+
+
+|DUT|Exp_0_EE214:add_instance
+X[0] => Half_Adder:HA1.B
+X[1] => Half_Adder:HA1.A
+X[2] => Full_Adder:FA1.A
+X[3] => Full_Adder:FA1.B
+X[4] => Full_Adder:FA1.Cin
+X[5] => Full_Adder:FA2.A
+X[6] => Full_Adder:FA2.B
+X[7] => Full_Adder:FA2.Cin
+Y[0] <= Invert_1:INV1.Y
+Y[1] <= M.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Exp_0_EE214:add_instance|Half_Adder:HA1
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Exp_0_EE214:add_instance|Full_Adder:FA1
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Exp_0_EE214:add_instance|Full_Adder:FA2
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Exp_0_EE214:add_instance|Four_Bit_Adder:FBA1
+B3 => Full_Adder:FA3.A
+A3 => Full_Adder:FA3.B
+B2 => Full_Adder:FA2.A
+A2 => Full_Adder:FA2.B
+B1 => Full_Adder:FA1.A
+A1 => Full_Adder:FA1.B
+B0 => Half_Adder:HA1.A
+A0 => Half_Adder:HA1.B
+R3 <= Full_Adder:FA3.S
+R2 <= Full_Adder:FA2.S
+R1 <= Full_Adder:FA1.S
+R0 <= Half_Adder:HA1.S
+Cout <= Full_Adder:FA3.Cout
+
+
+|DUT|Exp_0_EE214:add_instance|Four_Bit_Adder:FBA1|Half_Adder:HA1
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Exp_0_EE214:add_instance|Four_Bit_Adder:FBA1|Full_Adder:FA1
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Exp_0_EE214:add_instance|Four_Bit_Adder:FBA1|Full_Adder:FA2
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Exp_0_EE214:add_instance|Four_Bit_Adder:FBA1|Full_Adder:FA3
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Exp_0_EE214:add_instance|Four_Bit_Adder:FBA2
+B3 => Full_Adder:FA3.A
+A3 => Full_Adder:FA3.B
+B2 => Full_Adder:FA2.A
+A2 => Full_Adder:FA2.B
+B1 => Full_Adder:FA1.A
+A1 => Full_Adder:FA1.B
+B0 => Half_Adder:HA1.A
+A0 => Half_Adder:HA1.B
+R3 <= Full_Adder:FA3.S
+R2 <= Full_Adder:FA2.S
+R1 <= Full_Adder:FA1.S
+R0 <= Half_Adder:HA1.S
+Cout <= Full_Adder:FA3.Cout
+
+
+|DUT|Exp_0_EE214:add_instance|Four_Bit_Adder:FBA2|Half_Adder:HA1
+A => S.IN0
+A => C.IN0
+B => S.IN1
+B => C.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+C <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Exp_0_EE214:add_instance|Four_Bit_Adder:FBA2|Full_Adder:FA1
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Exp_0_EE214:add_instance|Four_Bit_Adder:FBA2|Full_Adder:FA2
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Exp_0_EE214:add_instance|Four_Bit_Adder:FBA2|Full_Adder:FA3
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN1
+Cin => S.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Exp_0_EE214:add_instance|Invert_1:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+

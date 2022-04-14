@@ -1,0 +1,134 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/4. SPRING 2021/EE214/EXP 6/simulation/modelsim
+Emusic
+Z1 w1617276879
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8E:/4. SPRING 2021/EE214/EXP 6/music.vhd
+Z5 FE:/4. SPRING 2021/EE214/EXP 6/music.vhd
+l0
+L4 1
+VdC_LFYn[AUzRUk1;03a612
+!s100 lEhLc8O5UDlIzoJGZX_<:2
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1617352704
+!i10b 1
+Z8 !s108 1617352704.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|E:/4. SPRING 2021/EE214/EXP 6/music.vhd|
+Z10 !s107 E:/4. SPRING 2021/EE214/EXP 6/music.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Afsm
+R2
+R3
+DEx4 work 5 music 0 22 dC_LFYn[AUzRUk1;03a612
+!i122 0
+l27
+L10 139
+Vm=^FKPXm8dKajYAfFYiZM0
+!s100 V>A3M8^:b3WF`Ncnb0SKA1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Esong_tb
+Z13 w1617262423
+R2
+R3
+!i122 2
+R0
+Z14 8E:/4. SPRING 2021/EE214/EXP 6/song_tb.vhd
+Z15 FE:/4. SPRING 2021/EE214/EXP 6/song_tb.vhd
+l0
+L5 1
+V6KzozPY^>Q?@VC6hScK?z0
+!s100 AB_RdY^fH@=Skd7obRTe^0
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|E:/4. SPRING 2021/EE214/EXP 6/song_tb.vhd|
+!s107 E:/4. SPRING 2021/EE214/EXP 6/song_tb.vhd|
+!i113 1
+R11
+R12
+Atestbench
+R2
+R3
+DEx4 work 7 song_tb 0 22 6KzozPY^>Q?@VC6hScK?z0
+!i122 2
+l22
+L9 24
+VHm[]5WG3im]:V]i;WP?1L2
+!s100 B<eSIQQKk_lTciFI<eT9:2
+R6
+31
+R7
+!i10b 1
+R8
+R16
+Z17 !s107 E:/4. SPRING 2021/EE214/EXP 6/song_tb.vhd|
+!i113 1
+R11
+R12
+Etonegenerator
+Z18 w1617272136
+R2
+R3
+!i122 1
+R0
+Z19 8E:/4. SPRING 2021/EE214/EXP 6/toneGenerator.vhd
+Z20 FE:/4. SPRING 2021/EE214/EXP 6/toneGenerator.vhd
+l0
+L3 1
+V1ho161h8L>X]2@a:GD]`l0
+!s100 <18NB`h85<jczmz6Eh:Yj2
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|E:/4. SPRING 2021/EE214/EXP 6/toneGenerator.vhd|
+Z22 !s107 E:/4. SPRING 2021/EE214/EXP 6/toneGenerator.vhd|
+!i113 1
+R11
+R12
+Aarch1
+R2
+R3
+DEx4 work 13 tonegenerator 0 22 1ho161h8L>X]2@a:GD]`l0
+!i122 1
+l10
+L9 92
+VPehKAkI[3hKB<WdSG;z_<0
+!s100 h6U[L?OFb8Pb73JbkW;>33
+R6
+31
+R7
+!i10b 1
+R8
+R21
+R22
+!i113 1
+R11
+R12

@@ -1,0 +1,11 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {E:/4. SPRING 2021/EE214/EXP 1/MUX_2/Gates.vhd}
+vcom -93 -work work {E:/4. SPRING 2021/EE214/EXP 1/MUX_2/DUT.vhd}
+vcom -93 -work work {E:/4. SPRING 2021/EE214/EXP 1/MUX_2/MUX_2.vhd}
+
